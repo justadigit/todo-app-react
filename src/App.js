@@ -9,7 +9,7 @@ export default class App extends Component {
   state = {
     items:[],
     item:"",
-    edited:false
+    edited:false,
   }
   item = null;
    handleChange = (e)=>{
@@ -27,7 +27,7 @@ export default class App extends Component {
     this.setState({
       items: updatedItem,
       item:"",
-      edited:false
+      edited:false,
     })
   }
   handleDelete = (id)=>{
@@ -49,8 +49,11 @@ export default class App extends Component {
       items : editItem,
       item:selectItem.title,
       edited:true,
-      id:id
+      id:id,
     })
+  }
+  handleCheck = e =>{
+    console.log(e);
   }
   render() {
     return (
@@ -68,6 +71,8 @@ export default class App extends Component {
              items={this.state.items} 
              handleDelete={this.handleDelete} 
              handleEdit={this.handleEdit}
+             checked = {this.state.checked}
+             handleCheck = {this.handleCheck}
              />
            </div>
          </div>
