@@ -11,7 +11,7 @@ export default class TodoList extends Component {
                          handleEdit={()=>handleEdit(item.id)}
                         />
                     )
-                })):(<p className="text-center my-2 text-danger"><h2>No Item Yet!</h2></p> )
+                })):(<h2 className="text-center my-2 text-danger">No Item Yet!</h2> )
            return( <ul className="list-group"> 
              { 
                  itemList
